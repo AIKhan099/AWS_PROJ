@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>This is home page</h1>
+{#<a href={% url 'results' %}> Click here to go to result page</a>#}
+<p>covert your letters to lower case</p>
+<form action="{% url 'results' %}">
+    <input type="text", name="user_input">
+    <input type="submit", value="Submit">
+
+{#        here information will be traveled to results url.py after submission. After #}
+{#    finding out path('results/', views.results, name='results') it will be traveled to views.py#}
+{#    where it will be recieved using request.GET. After that it will be retuned to results.html page to show#}
+</form>
+</body>
+</html>
